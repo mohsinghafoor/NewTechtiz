@@ -1,10 +1,10 @@
 import React from 'react'
 import { Routes as Switch, Route } from 'react-router-dom'
-import Careers from './components/Pages/Careers'
-import Home from './components/Pages/Home'
-import NotFound from './components/Pages/NotFound'
-import Porfolio from './components/Pages/Porfolio'
-import Services from './components/Pages/Services'
+import Careers from './Pages/Careers'
+import Home from './Pages/Home'
+import NotFound from './Pages/NotFound'
+import Porfolio from './Pages/Portfolio'
+import Services from './Pages/Services'
 
 const Routes = () => {
   return (

@@ -8,7 +8,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import React from 'react'
-import Colors from '../Constants/Colors'
+import Colors from '../../components/Constants/Colors'
 
 const Home = () => {
   return (
