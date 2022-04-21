@@ -1,26 +1,40 @@
-import { Stack } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Text, TextProps, Box } from '@chakra-ui/react'
+import { Link, useLocation } from 'react-router-dom'
+import Colors from '../Constants/Colors'
 
-interface Props {
-  isOpen: boolean
-}
+const NavItems = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Careers', path: '/careers' },
+  { name: 'Blogs', path: '/careers' },
+  { name: 'About Us', path: '/careers' },
+]
 
-const TopNav = (props: Props) => {
-  const { isOpen } = props
+const TopNav = () => {
+  const location = useLocation()
+  let currentPage = location.pathname.split('/')[1]
+  currentPage = currentPage.charAt(0).toUpperCase() + currentPage.slice(1)
+
+  const textStyles: TextProps = {
+    marginRight: { base: '56px', md: '30px' },
+    fontSize: '16px',
+  }
+
   return (
-    <Stack
-      direction={{ base: 'column', md: 'row' }}
-      display={{ base: isOpen ? 'block' : 'none', md: 'flex' }}
-      width={{ base: 'full', md: 'auto' }}
-      alignItems='center'
-      flexGrow={1}
-      mt={{ base: 4, md: 0 }}
-    >
-      <Link to={'./home'}>Home</Link>
-      <Link to={'./services'}>Services</Link>
-      <Link to={'./porfolio'}>Porfolio</Link>
-      <Link to={'./careers'}>Careers</Link>
-    </Stack>
+    <>
+      {NavItems.map((item, index) => (
+        <Link to={item.path} key={index}>
+          <Text {...textStyles}>
+            {item.name}
+            {(currentPage === item.name ||
+              (currentPage === '' && item.name === 'Home')) && (
+              <Box bgColor={Colors.white} w='65%' h='2px'></Box>
+            )}
+          </Text>
+        </Link>
+      ))}
+    </>
   )
 }
 

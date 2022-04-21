@@ -4,6 +4,7 @@ import App from './App'
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter } from 'react-router-dom'
 import CustomTheme from './theme'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const container = document.getElementById('root')
 const root = createRoot(container!)
