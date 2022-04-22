@@ -10,7 +10,7 @@ export default function Company() {
   return (
     <Stack>
       <Heading
-        fontSize={{ base: "12px", md: "16px", lg: "18px" }}
+        fontSize={"18px"}
         fontWeight="600"
         color="white"
         fontFamily={"DM Sans"}

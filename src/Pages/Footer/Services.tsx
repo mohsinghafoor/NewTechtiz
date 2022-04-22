@@ -10,11 +10,11 @@ export default function Services() {
   return (
     <Stack>
       <Heading
-        fontSize={{ base: "12px", md: "16px", lg: "18px" }}
+        fontSize={"18px"}
         fontWeight="600"
         color="white"
         fontFamily={"DM Sans"}
-        pb="4"
+        pb={{ base: 1, md: "4" }}
       >
         Services
       </Heading>
@@ -28,7 +28,7 @@ export default function Services() {
           fontWeight="400"
           color="white"
           fontFamily={"DM Sans"}
-          maxW={{ base: "120px", md: "100px", lg: "140px" }}
+          maxW={{ base: "145px", md: "100px", lg: "140px" }}
           pb="2"
         >
           {data.name}

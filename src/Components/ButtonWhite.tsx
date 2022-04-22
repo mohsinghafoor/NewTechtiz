@@ -8,11 +8,12 @@ const WhiteButton = ({ children, ...props }: ButtonProps) => {
 };
 const btnStyles: ButtonProps = {
   bg: "white",
-  border: "none",
+
   rounded: "8px",
   fontWeight: 500,
   fontSize: "16px",
   color: "#032E9B",
   fontFamily: "DM Sans",
+  border: "1px solid #032E9B",
 };
 export default WhiteButton;
