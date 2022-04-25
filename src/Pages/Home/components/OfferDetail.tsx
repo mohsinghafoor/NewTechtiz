@@ -1,5 +1,12 @@
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
-import React from 'react'
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  VStack,
+  Image,
+  Text,
+} from '@chakra-ui/react'
 import Colors from '../../../components/Constants/Colors'
 
 interface Props {
@@ -10,23 +17,26 @@ interface Props {
 
 const OfferDetail = (props: Props) => {
   const { heading, text, imageUrl } = props
+
   return (
     <Flex pos='relative' justifyContent='flex-end'>
-      <Box
+      <VStack
         padding='53px 84px 53px 60px'
         border='1px solid'
         borderColor={Colors.lightPurple}
         pos='absolute'
-        top='83px'
+        top='67px'
         left='80px'
         zIndex='1'
         bg={Colors.white}
-        height='min-content'
         maxWidth='713px'
         borderRadius='8px'
+        alignItems='flex-start'
       >
-        <Heading>{heading}</Heading>
-        <Text>{text}</Text>
+        <Heading textAlign='start'>{heading}</Heading>
+        <Text textAlign='start' m='20px 0 15px !important'>
+          {text}
+        </Text>
         <Button
           variant='outline'
           bg={Colors.white}
@@ -39,9 +49,9 @@ const OfferDetail = (props: Props) => {
         >
           Get Started
         </Button>
-      </Box>
+      </VStack>
       <Box w='50%'>
-        <Image src={imageUrl} height={'420px'} />
+        <Image src={imageUrl} height={'440px'} />
       </Box>
     </Flex>
   )

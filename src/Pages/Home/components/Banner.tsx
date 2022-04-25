@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react'
 import { Carousel } from 'react-responsive-carousel'
 import BannerData from './BannerData'
 import '../home.css'
+import { BannersData } from './PageData'
 
 const Banner = () => {
   return (
@@ -10,24 +11,21 @@ const Banner = () => {
       pt='120px'
       justifyContent={{ sm: 'start', xl: 'center' }}
     >
-      <Carousel autoPlay showStatus={false} showArrows={false}>
-        <BannerData
-          heading='Digital Solutions to Get Your Business Up & Running'
-          text='Result-driven software products to support your digital journey.'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/04/banner-imgc.png'
-        />
-        <BannerData
-          heading='Converting Your Imagination into Innovation'
-          text='Get the best web applications tailored to create the ideal user
-          experience'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/03/INOVATION.svg'
-        />
-        <BannerData
-          heading='Transform Your Digital Identity with TechTiz'
-          text='Enabling businesses to unlock their maximum potential through
-          enterprise-grade software'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/03/digital-identity.svg'
-        />
+      <Carousel
+        autoPlay
+        showStatus={false}
+        showArrows={false}
+        infiniteLoop
+        showThumbs={false}
+      >
+        {BannersData.map((item, index) => (
+          <BannerData
+            heading={item.heading}
+            text={item.text}
+            imageUrl={item.imageUrl}
+            key={index}
+          />
+        ))}
       </Carousel>
     </Box>
   )

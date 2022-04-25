@@ -8,22 +8,20 @@ import {
   Image,
   Text,
 } from '@chakra-ui/react'
-import React from 'react'
 import Colors from '../../../components/Constants/Colors'
-import { images } from '../../../assets/images/index'
 import OfferDetail from './OfferDetail'
 import { Carousel } from 'react-responsive-carousel'
-
-const Data = [
-  { icon: images.softwareDevIcon, text: 'Custom Software Development' },
-  { icon: images.teamArgumentIcon, text: 'Team Augmentation' },
-  { icon: images.designIcon, text: 'Product Designer' },
-  { icon: images.supportIcon, text: 'Support & Maintenance' },
-]
+import { IconsData, offerData } from './PageData'
+import { SetStateAction, useState } from 'react'
 
 const Offer = () => {
+  const [active, setActive] = useState(0)
+
+  const ShowOffer = (index: SetStateAction<number>) => {
+    setActive(index)
+  }
   return (
-    <Container w='full' maxW={'100%'} mb='30px'>
+    <Container w='full' maxW={'100%'} mb='30px' p={0}>
       <Box pl='89px'>
         <Heading
           color={Colors.bluePrimary}
@@ -39,57 +37,91 @@ const Offer = () => {
         </Text>
       </Box>
       <Box pl='79px' my='55px'>
-        <HStack>
-          {Data.map((item, index) => (
-            <Flex key={index}>
+        <HStack
+          alignItems='center'
+          flexWrap='wrap'
+          justifyContent='center'
+          shouldWrapChildren
+        >
+          {IconsData.map((item, index) => (
+            <Flex
+              key={index}
+              onClick={() => ShowOffer(index)}
+              cursor='pointer'
+              margin='20px 15px'
+            >
               <Circle
                 size='70px'
-                bg={Colors.purple}
+                bg={index === active ? Colors.purple : Colors.white}
                 shadow='0px 3px 14px rgba(0, 0, 0, 0.25)'
               >
-                <Image src={item.icon} alt='icon' />
+                <Image
+                  src={item.icon}
+                  alt='icon'
+                  filter={
+                    index === 0
+                      ? 'invert(30%) sepia(30%) saturate(6238%) hue-rotate(344deg) brightness(108%) contrast(98%)'
+                      : 'auto'
+                  }
+                />
               </Circle>
-              <Text fontSize='20px' Line-height='30px' marginLeft='16px'>
+              <Text
+                fontSize='20px'
+                lineHeight='30px'
+                marginLeft='16px'
+                w='160px'
+                mt='10px'
+              >
                 {item.text}
               </Text>
             </Flex>
           ))}
         </HStack>
       </Box>
-      <Carousel>
-        <OfferDetail
-          heading='Ideation & Discovery'
-          text='We assist the establishment of new businesses, starting from the
-          identification of their special requirements to designing and
-          developing MVP software.'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/03/development-c.jpg'
-        />
-        <OfferDetail
-          heading='Custom
-Development'
-          text='Our team of enthusiastic software engineers understand what’s ideal for your business and create pleasant user experiences for your customers./'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/03/custom-s.jpg'
-        />
-        <OfferDetail
-          heading='Team
-Augmentation'
-          text='We assist the establishment of new businesses, starting from the identification of their special requirements to designing and developing MVP software.'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/03/enterprise-icon-2048x1367.jpg'
-        />
-        <OfferDetail
-          heading='Product
-          Design'
-          text='Whether it is a design from scratch or redesigning a product we got you covered. We provide you with the best creative and advanced design services at one place.'
-          imageUrl='https://techtiz.co/wp-content/uploads/2022/03/design.jpg'
-        />
-
-        <OfferDetail
-          heading='Support
-          & Maintenance'
-          text='We offer maintenance and support packages that help you manage and conduct occasional reviews for feature updates and new versions.'
-          imageUrl='
-          https://techtiz.co/wp-content/uploads/2022/02/asian-businessmen-businesswomen-meeting-brainstorming-ideas-about-creative-web-design-planning-application-developing-template-layout-mobile-phone-project-working-together-small-office-1.png'
-        />
+      <Carousel
+        showArrows={false}
+        showStatus={false}
+        selectedItem={active}
+        infiniteLoop={true}
+        showThumbs={false}
+        onChange={(e) => setActive(e)}
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          const defStyle = {
+            margin: '0 4px',
+            background: Colors.lightBlue,
+            cursor: 'pointer',
+            bottom: '-15px',
+            left: '-100px',
+          }
+          const style = isSelected
+            ? { ...defStyle, background: Colors.blueSecondary }
+            : { ...defStyle }
+          return (
+            <Box
+              style={style}
+              onClick={onClickHandler}
+              onKeyDown={onClickHandler}
+              key={index}
+              role='button'
+              tabIndex={0}
+              aria-label={`${label} ${index + 1}`}
+              display='inline-block'
+              height='16px'
+              width='16px'
+              borderRadius='50%'
+              position='relative'
+            ></Box>
+          )
+        }}
+      >
+        {offerData.map((item, index) => (
+          <OfferDetail
+            heading={item.heading}
+            text={item.text}
+            imageUrl={item.imageUrl}
+            key={index}
+          />
+        ))}
       </Carousel>
     </Container>
   )

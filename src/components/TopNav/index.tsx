@@ -25,13 +25,12 @@ const TopNav = () => {
     <>
       {NavItems.map((item, index) => (
         <Link to={item.path} key={index}>
-          <Text {...textStyles}>
-            {item.name}
-            {(currentPage === item.name ||
-              (currentPage === '' && item.name === 'Home')) && (
-              <Box bgColor={Colors.white} w='65%' h='2px'></Box>
-            )}
-          </Text>
+          <Text {...textStyles}> {item.name}</Text>
+
+          {(currentPage === item.name ||
+            (currentPage === '' && item.name === 'Home')) && (
+            <Box bgColor={Colors.white} w='33%' h='2px'></Box>
+          )}
         </Link>
       ))}
     </>
