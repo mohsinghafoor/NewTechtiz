@@ -4,7 +4,7 @@ import { OurExpertise } from './PageData'
 
 const Expertise = () => {
   return (
-    <VStack w={'full'}>
+    <VStack w={'full'} mt='50px'>
       <Heading
         color={Colors.bluePrimary}
         fontWeight={700}
@@ -54,7 +54,7 @@ const Expertise = () => {
               fontSize='20px'
               lineHeight='28px'
               color={Colors.RegularText}
-              marginTop='34px'
+              marginTop='54px'
             >
               {item.text}
             </Text>

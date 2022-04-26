@@ -77,3 +77,80 @@ export const EngagementModels = [
     heading: 'Fixed Cost Projects',
   },
 ]
+
+export const Technology = [
+  'Mobile App Development',
+
+  'Front-end Development',
+
+  'Back-end Development',
+]
+
+export const TechStacks = [
+  {
+    mobile: [
+      {
+        id: '212',
+        text: 'Android',
+        imageUrl: images.androidIcon,
+      },
+      {
+        id: '132',
+        text: 'IOS',
+        imageUrl: images.iosIcon,
+      },
+      {
+        id: '152',
+        text: 'Flutter',
+        imageUrl: images.flutterIcon,
+      },
+      {
+        id: '789',
+        text: 'React',
+        imageUrl:
+          'https://techtiz.co/wp-content/uploads/2022/04/react-icon.jpg',
+      },
+    ],
+  },
+
+  {
+    frontEnd: [
+      {
+        id: '111',
+        text: 'HTML',
+        imageUrl: 'https://techtiz.co/wp-content/uploads/2022/04/html-5.png',
+      },
+      {
+        id: '112',
+        text: 'CSS',
+        imageUrl: 'https://techtiz.co/wp-content/uploads/2022/04/css.png',
+      },
+      {
+        id: '113',
+        text: 'Bootsrtap',
+        imageUrl: 'https://techtiz.co/wp-content/uploads/2022/04/bootstrap.png',
+      },
+      {
+        id: '213',
+        text: 'React',
+        imageUrl:
+          'https://techtiz.co/wp-content/uploads/2022/04/react-icon.jpg',
+      },
+    ],
+  },
+
+  {
+    backEnd: [
+      {
+        id: '114',
+        text: 'Dart',
+        imageUrl: 'https://techtiz.co/wp-content/uploads/2022/04/dart-c.png',
+      },
+      {
+        id: '115',
+        text: 'Node Js',
+        imageUrl: 'https://techtiz.co/wp-content/uploads/2022/03/Node-jS.svg',
+      },
+    ],
+  },
+]

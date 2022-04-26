@@ -9,4 +9,8 @@ export default {
   lightBlue: '#A2B4E1',
   RegularText: '##535353',
   subHeading: '#2E2E2E',
+  disabled: '#B5B5B5',
+  blueBg: '#E6EDFE',
+  imgBg: '#95a63a',
+  greyLight: '#656565',
 }

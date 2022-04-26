@@ -1,12 +1,4 @@
-import {
-  Heading,
-  Text,
-  VStack,
-  HStack,
-  Box,
-  Image,
-  Flex,
-} from '@chakra-ui/react'
+import { Heading, Text, VStack, HStack, Image } from '@chakra-ui/react'
 import Colors from '../../../components/Constants/Colors'
 import { EngagementModels } from './PageData'
 

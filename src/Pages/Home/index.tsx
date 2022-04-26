@@ -4,6 +4,8 @@ import Banner from './components/Banner'
 import EngagementModel from './components/EngagementModel'
 import Expertise from './components/Expertise'
 import Offer from './components/Offer'
+import Reviews from './components/Reviews'
+import Technologies from './components/Technologies'
 import './home.css'
 
 const Home = () => {
@@ -24,7 +26,10 @@ const Home = () => {
       </Heading>
       <Offer />
       <Expertise />
+      <Technologies />
+
       <EngagementModel />
+      <Reviews />
     </>
   )
 }

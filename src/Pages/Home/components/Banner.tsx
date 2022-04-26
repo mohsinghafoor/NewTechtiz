@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <Box
       bg='radial-gradient(circle, rgba(9,33,131,1) 0%, rgba(9,9,121,0.8589810924369747) 87%, rgba(9,33,131,0.9066001400560224) 100%)'
-      pt='120px'
+      pt='85px'
       justifyContent={{ sm: 'start', xl: 'center' }}
     >
       <Carousel
