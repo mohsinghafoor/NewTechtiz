@@ -28,25 +28,25 @@ export default function Footer() {
         </GridItem>
         <GridItem
           colSpan={{ base: 6, md: 2 }}
-          pt={{ base: "10px", md: "45px" }}
+          pt={{ base: "30px", md: "45px" }}
         >
           <Company />
         </GridItem>
         <GridItem
           colSpan={{ base: 6, md: 2 }}
-          pt={{ base: "10px", md: "45px" }}
+          pt={{ base: "30px", md: "45px" }}
         >
           <Services />
         </GridItem>
         <GridItem
           colSpan={{ base: 6, md: 2 }}
-          pt={{ base: "10px", md: "45px" }}
+          pt={{ base: "30px", md: "45px" }}
         >
           <Resources />
         </GridItem>
         <GridItem
           colSpan={{ base: 6, md: 2 }}
-          pt={{ base: "10px", md: "45px" }}
+          pt={{ base: "30px", md: "45px" }}
         >
           <ReachUs />
         </GridItem>

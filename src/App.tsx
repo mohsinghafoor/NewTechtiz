@@ -1,9 +1,17 @@
 import "./App.css";
-import Industries from "./Pages/Industries";
-import WebDevelopment from "./Pages/WebDevelopment";
-import Intro from "./Pages/WebDevelopment/Intro";
+import MobileDevelopment from "../src/Pages/Services/MobileDevelopment";
+import WebDevelopment from "./Pages/Services/Web Development";
+import UI from "./Pages/Services/UI";
+import SQA from "./Pages/Services/SQA";
 function App() {
-  return <WebDevelopment />;
+  return (
+    <>
+      {/* <WebDevelopment /> */}
+      {/* <MobileDevelopment /> */}
+      {/* <UI /> */}
+      <SQA />
+    </>
+  );
 }
 
 export default App;

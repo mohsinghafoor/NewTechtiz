@@ -1,6 +1,5 @@
-import { Heading, Image, Stack, Text } from "@chakra-ui/react";
-
-export default function CrossAppCard({ data }: any) {
+import { Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
+export default function CrossAppCard({ crossAppData }: any) {
   return (
     <Stack
       border=" 1px solid #B4C9FD"
@@ -10,7 +9,7 @@ export default function CrossAppCard({ data }: any) {
       p="30px"
       h="100%"
     >
-      <Image src={data.logo} maxW="50px" pb="30px" />
+      <Image src={crossAppData.logo} maxW="50px" pb="30px" />
       <Heading
         color="#032E9B"
         fontWeight={"700"}
@@ -18,7 +17,7 @@ export default function CrossAppCard({ data }: any) {
         fontFamily={"DM Sans"}
         pb="30px"
       >
-        {data.heading}
+        {crossAppData.heading}
       </Heading>
       <Text
         color="#2E2E2E"
@@ -27,7 +26,7 @@ export default function CrossAppCard({ data }: any) {
         fontFamily={"DM Sans"}
         pb={{ base: "50px", md: "30px" }}
       >
-        {data.text}
+        {crossAppData.text}
       </Text>
     </Stack>
   );

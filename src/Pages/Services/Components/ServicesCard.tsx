@@ -1,29 +1,19 @@
-import {
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import React from "react";
-import frontendImg from "../../assets/frontendImg.png";
-import WhiteButton from "../../Components/ButtonWhite";
-import { useMediaQuery } from "@chakra-ui/react";
-export default function ServicesCard({ data }: any) {
-  const [iPhone] = useMediaQuery("(min-width: 600px)");
+import { Flex, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import WhiteButton from "../../../Components/ButtonWhite";
+export default function ServicesCard({ servicesData }: any) {
   return (
     <Flex
       bg=" #032E9B"
       w={{ base: "360px", sm: "650px", lg: "961px" }}
       align={"center"}
-      direction={data.left ? "row" : "row-reverse"}
+      direction={servicesData.left ? "row" : "row-reverse"}
       p={{ base: "40px", md: "50px" }}
       rounded={"20px"}
+      my={"20px"}
+      minH="450px"
     >
       <Stack w="50%" display={{ base: "none", md: "block" }}>
-        <Image src={data.img} maxW="400px" />
+        <Image src={servicesData.img} maxW="400px" />
       </Stack>
       <VStack align={"flex-start"} w={{ base: "100%", md: "50%" }}>
         <Heading
@@ -33,7 +23,7 @@ export default function ServicesCard({ data }: any) {
           fontFamily={"DM Sans"}
           pb="30px"
         >
-          {data.heading}
+          {servicesData.heading}
         </Heading>
         <Text
           color="white"
@@ -43,9 +33,9 @@ export default function ServicesCard({ data }: any) {
           pb="30px"
           maxW="380px"
         >
-          {data.text}
+          {servicesData.text}
         </Text>
-        <WhiteButton>{data.btntext}</WhiteButton>
+        <WhiteButton>{servicesData.btntext}</WhiteButton>
       </VStack>
     </Flex>
   );
