@@ -1,0 +1,60 @@
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  VStack,
+  Image,
+  Text,
+} from '@chakra-ui/react'
+import Colors from '../../../components/Constants/Colors'
+
+interface Props {
+  heading: string
+  text: string
+  imageUrl: string
+}
+
+const OfferDetail = (props: Props) => {
+  const { heading, text, imageUrl } = props
+
+  return (
+    <Flex pos='relative' justifyContent='flex-end'>
+      <VStack
+        padding='53px 84px 53px 60px'
+        border='1px solid'
+        borderColor={Colors.lightPurple}
+        pos='absolute'
+        top='67px'
+        left='80px'
+        zIndex='1'
+        bg={Colors.white}
+        maxWidth='713px'
+        borderRadius='8px'
+        alignItems='flex-start'
+      >
+        <Heading textAlign='start'>{heading}</Heading>
+        <Text textAlign='start' m='20px 0 15px !important'>
+          {text}
+        </Text>
+        <Button
+          variant='outline'
+          bg={Colors.white}
+          color={Colors.blueSecondary}
+          _hover={{
+            bg: Colors.blueSecondary,
+            borderColor: 'teal.700',
+            color: Colors.white,
+          }}
+        >
+          Get Started
+        </Button>
+      </VStack>
+      <Box w='50%'>
+        <Image src={imageUrl} height={'440px'} />
+      </Box>
+    </Flex>
+  )
+}
+
+export default OfferDetail
