@@ -85,8 +85,8 @@ const OurProjects = () => {
           alignItems='center'
           justifyContent='center'
           flex='1'
-          paddingTop='100px'
-          paddingBottom='180px'
+          paddingTop='80px'
+          paddingBottom='140px'
         >
           <Image src={images.quart1} width='560px' height='600px' />
         </Flex>
