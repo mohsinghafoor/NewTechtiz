@@ -1,5 +1,6 @@
 import { Heading } from '@chakra-ui/react'
 import Colors from '../../components/Constants/Colors'
+import Footer from '../Footer'
 import Banner from './components/Banner'
 import EngagementModel from './components/EngagementModel'
 import Expertise from './components/Expertise'
@@ -26,12 +27,13 @@ const Home = () => {
         tech-driven digital solutions
       </Heading>
       <Offer />
+      <GrowBusiness />
       <Expertise />
       <Technologies />
-
       <EngagementModel />
       <Reviews />
-      <GrowBusiness />
+
+      <Footer />
     </>
   )
 }

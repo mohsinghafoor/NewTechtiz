@@ -189,3 +189,19 @@ export const GrowBusinessImages = [
   images.smallC,
   images.enterprise,
 ]
+
+export const clientData = [
+  {
+    name: 'Norbu Snow-Shiva',
+    company: 'COO World Tree Consulting',
+  },
+  {
+    name: 'Norbu Snow-Shiva2',
+    company: 'COO World Tree Consulting',
+  },
+]
+
+export const clientReviews = [
+  ' They have gone above and beyond to make very tight deadlines and exceed my expectations.',
+  'They make extraordinary smart and fast and optimize apps ',
+]

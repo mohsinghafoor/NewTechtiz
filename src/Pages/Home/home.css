@@ -20,4 +20,5 @@
   height: 536px;
   width: 100%;
   top: -115px;
+  z-index: -1;
 }
