@@ -10,6 +10,7 @@
 
 .technologies {
   position: relative;
+  margin-bottom: 160px !important;
 }
 .technologies::before {
   position: absolute;

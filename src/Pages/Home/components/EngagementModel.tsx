@@ -1,11 +1,11 @@
-import { Heading, Text, VStack, HStack, Image } from '@chakra-ui/react'
+import { Heading, VStack, HStack } from '@chakra-ui/react'
 import Colors from '../../../components/Constants/Colors'
 import { EngagementModels } from './PageData'
 import EngagementCard from './EngagementCard'
 
 const EngagementModel = () => {
   return (
-    <VStack w={'full'} padding='0 40px'>
+    <VStack w={'full'} padding='0 40px' marginBottom='70px'>
       <Heading
         color={Colors.bluePrimary}
         fontWeight={700}
