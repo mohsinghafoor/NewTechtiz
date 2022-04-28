@@ -19,7 +19,7 @@ const OfferDetail = (props: Props) => {
   const { heading, text, imageUrl } = props
 
   return (
-    <HStack pos='relative' justifyContent='flex-end'>
+    <HStack justifyContent='flex-end' paddingLeft='60px'>
       <VStack
         padding='53px 84px 53px 60px'
         border='1px solid'

@@ -11,6 +11,7 @@ import {
   Image,
   List,
   ListItem,
+  Progress,
   Text,
   VStack,
 } from '@chakra-ui/react'
@@ -20,7 +21,9 @@ import Colors from '../../../components/Constants/Colors'
 import { GrowBusinessData, GrowBusinessImages } from './PageData'
 
 const GrowBusiness = () => {
-  const [selectedImage, setSelectedImage] = useState(0)
+  const [selectedImage, setSelectedImage] = useState<any>(0)
+  const [expanded, setExpanded] = useState(false)
+  // console.log(expanded)
   return (
     <VStack w='full' alignItems='center' justifyContent='center'>
       <Heading
@@ -40,47 +43,77 @@ const GrowBusiness = () => {
         mt='50px !important'
       >
         <Box w='50%'>
-          <Accordion allowMultiple w='100%'>
+          <Accordion
+            allowToggle
+            w='100%'
+            onChange={(e) => {
+              if (e >= 0) {
+                setExpanded(true)
+                setSelectedImage(e)
+              } else {
+                setExpanded(false)
+              }
+            }}
+          >
             {GrowBusinessData.map((item, index) => (
-              <AccordionItem
-                key={index}
-                onClick={() => setSelectedImage(index)}
-              >
-                <h2>
-                  <AccordionButton>
-                    <Box flex='1' textAlign='left'>
-                      <Text
-                        color={Colors.blueSecondary}
-                        fontSize='24px'
-                        lineHeight='63.98px'
-                      >
-                        {item.heading}
-                      </Text>
-                    </Box>
-                    <AccordionIcon
-                      color={Colors.blueSecondary}
-                      height='24px'
-                      width='24px'
-                    />
-                  </AccordionButton>
-                </h2>
-                {item.list.map((listItem, index) => (
-                  <AccordionPanel pb={4} key={index}>
-                    <List display='flex' alignItems='flex-start'>
-                      <Image
-                        src={images.listBullet}
-                        marginTop='6px'
-                        marginRight='20px'
-                      />
-                      <ListItem>
-                        <Text fontSize='16px' lineHeight='30px'>
-                          {listItem}
+              <>
+                {expanded && selectedImage === index && (
+                  <Progress
+                    value={
+                      index === 0
+                        ? 35
+                        : index === 1
+                        ? 55
+                        : index === 2
+                        ? 100
+                        : 0
+                    }
+                    size='xs'
+                    colorScheme='blue'
+                  />
+                )}
+                <AccordionItem
+                  key={index}
+                  onClick={() => {
+                    setSelectedImage(index)
+                  }}
+                >
+                  <h2>
+                    <AccordionButton>
+                      <Box flex='1' textAlign='left'>
+                        <Text
+                          color={Colors.blueSecondary}
+                          fontSize='24px'
+                          lineHeight='63.98px'
+                        >
+                          {item.heading}
                         </Text>
-                      </ListItem>
-                    </List>
-                  </AccordionPanel>
-                ))}
-              </AccordionItem>
+                      </Box>
+                      <AccordionIcon
+                        color={Colors.blueSecondary}
+                        height='24px'
+                        width='24px'
+                      />
+                    </AccordionButton>
+                  </h2>
+                  {item.list.map((listItem, index) => (
+                    <AccordionPanel pb={4} key={index}>
+                      <List display='flex' alignItems='flex-start'>
+                        <Image
+                          src={images.listBullet}
+                          marginTop='6px'
+                          marginRight='20px'
+                        />
+                        <ListItem>
+                          <Text fontSize='16px' lineHeight='30px'>
+                            {listItem}
+                          </Text>
+                        </ListItem>
+                      </List>
+                    </AccordionPanel>
+                  ))}
+                </AccordionItem>
+              </>
             ))}
           </Accordion>
         </Box>

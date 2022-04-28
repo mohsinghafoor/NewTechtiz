@@ -8,6 +8,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import Colors from '../../../components/Constants/Colors'
+import '../home.css'
 
 interface Props {
   heading: string
@@ -62,7 +63,12 @@ const BannerData = (props: Props) => {
         </HStack>
       </VStack>
       <Box mr='40px' display={{ sm: 'none', md: 'flex' }} width='45%'>
-        <Image src={imageUrl} height='506px' width='603px' />
+        <Image
+          src={imageUrl}
+          height='506px'
+          width='603px'
+          className='banner-image'
+        />
       </Box>
     </HStack>
   )

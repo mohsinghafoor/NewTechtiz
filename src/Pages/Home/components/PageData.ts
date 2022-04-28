@@ -2,7 +2,7 @@ import { images } from '../../../assets/images'
 
 export const IconsData = [
   { icon: images.ideationIcon, text: 'Ideation & Discovery' },
-  { icon: images.softwareDevIcon, text: 'Custom Software Development' },
+  { icon: images.softwareDevIcon, text: 'Custom  Development' },
   { icon: images.teamArgumentIcon, text: 'Team Augmentation' },
   { icon: images.designIcon, text: 'Product Designer' },
   { icon: images.supportIcon, text: 'Support & Maintenance' },

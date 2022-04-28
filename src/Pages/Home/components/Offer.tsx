@@ -22,7 +22,7 @@ const Offer = () => {
   }
   return (
     <Container w='full' maxW={'100%'} mb='30px' p={0}>
-      <Box pl='89px'>
+      <Box pl='60px'>
         <Heading
           color={Colors.bluePrimary}
           fontWeight={700}
@@ -36,11 +36,11 @@ const Offer = () => {
           style
         </Text>
       </Box>
-      <Box pl='79px' my='55px'>
+      <Box pl='62px' my='55px'>
         <HStack
           alignItems='center'
           flexWrap='wrap'
-          justifyContent='center'
+          // justifyContent='center'
           shouldWrapChildren
         >
           {IconsData.map((item, index) => (
@@ -48,7 +48,7 @@ const Offer = () => {
               key={index}
               onClick={() => ShowOffer(index)}
               cursor='pointer'
-              margin='20px 15px'
+              margin='20px 0px'
             >
               <Circle
                 size='70px'
@@ -66,10 +66,11 @@ const Offer = () => {
                 />
               </Circle>
               <Text
+                fontWeight={index === active ? 600 : 400}
                 fontSize='20px'
                 lineHeight='30px'
                 marginLeft='16px'
-                w='160px'
+                w='139px'
                 mt='10px'
               >
                 {item.text}

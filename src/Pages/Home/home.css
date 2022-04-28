@@ -68,3 +68,17 @@ img {
   width: auto;
   height: auto;
 }
+
+.banner-image {
+  transform-origin: center top;
+  animation: scale 2000ms ease-in-out forwards;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.05);
+  }
+}
