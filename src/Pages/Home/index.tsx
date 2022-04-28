@@ -3,6 +3,7 @@ import Colors from '../../components/Constants/Colors'
 import Banner from './components/Banner'
 import EngagementModel from './components/EngagementModel'
 import Expertise from './components/Expertise'
+import GrowBusiness from './components/GrowBusiness'
 import Offer from './components/Offer'
 import Reviews from './components/Reviews'
 import Technologies from './components/Technologies'
@@ -30,6 +31,7 @@ const Home = () => {
 
       <EngagementModel />
       <Reviews />
+      <GrowBusiness />
     </>
   )
 }

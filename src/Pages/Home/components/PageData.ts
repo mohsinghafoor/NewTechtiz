@@ -154,3 +154,38 @@ export const TechStacks = [
     ],
   },
 ]
+
+export const GrowBusinessData = [
+  {
+    heading: 'Startups',
+    list: [
+      'Supporting businesses right from the ideation phase by analyzing the feasibility of their digital products',
+      'Rapid development of MVPs to get better insights of market trends and the demands of potential customers',
+      'Bringing together valuable resources to help your business establish its foundations and boost productivity.',
+    ],
+  },
+
+  {
+    heading: 'SMEs',
+    list: [
+      'Development of innovative digital applications to turn the idea behind your business into a reality',
+      'Team augmentation with technical training and expert assistance to boost business development and growth',
+      'Implementation of a client-centric approach with superlative technologies for web & mobile app development',
+    ],
+  },
+
+  {
+    heading: 'Enterprises',
+    list: [
+      'Optimizing business operations and streamlining workflows with customized and functional software',
+      'Improving the efficiency of your existing digital solutions by upgrading the right features and designs',
+      'Empowering your staff with skills to successfully achieve business goals and develop a greater digital footprint',
+    ],
+  },
+]
+
+export const GrowBusinessImages = [
+  images.startup,
+  images.smallC,
+  images.enterprise,
+]

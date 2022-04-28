@@ -13,4 +13,8 @@ export const images = {
   quotes: require('./quotes.png'),
   person: require('./person.png'),
   clutch: require('./clutch.png'),
+  enterprise: require('./epr.jpg'),
+  smallC: require('./small-c.png'),
+  startup: require('./startup.png'),
+  listBullet: require('./list-bullet.png'),
 }
