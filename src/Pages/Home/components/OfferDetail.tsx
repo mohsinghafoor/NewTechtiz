@@ -1,7 +1,7 @@
 import {
   Box,
   Button,
-  Flex,
+  HStack,
   Heading,
   VStack,
   Image,
@@ -19,14 +19,12 @@ const OfferDetail = (props: Props) => {
   const { heading, text, imageUrl } = props
 
   return (
-    <Flex pos='relative' justifyContent='flex-end'>
+    <HStack pos='relative' justifyContent='flex-end'>
       <VStack
         padding='53px 84px 53px 60px'
         border='1px solid'
         borderColor={Colors.lightPurple}
-        pos='absolute'
-        top='67px'
-        left='80px'
+        marginRight='-80px'
         zIndex='1'
         bg={Colors.white}
         maxWidth='713px'
@@ -53,7 +51,7 @@ const OfferDetail = (props: Props) => {
       <Box w='50%'>
         <Image src={imageUrl} height={'440px'} />
       </Box>
-    </Flex>
+    </HStack>
   )
 }
 

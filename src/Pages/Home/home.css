@@ -23,3 +23,24 @@
   top: -115px;
   z-index: -1;
 }
+
+.img-white {
+  animation: rotation 5s infinite linear;
+  padding-left: 65px;
+  padding-top: 83px;
+  width: auto;
+  height: auto;
+}
+
+.img-white-sec {
+  animation-name: stretch;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  padding-left: 100px;
+  padding-top: 40px;
+  width: auto;
+  height: auto;
+}

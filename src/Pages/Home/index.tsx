@@ -6,6 +6,7 @@ import EngagementModel from './components/EngagementModel'
 import Expertise from './components/Expertise'
 import GrowBusiness from './components/GrowBusiness'
 import Offer from './components/Offer'
+import OurProjects from './components/OurProjects'
 import Reviews from './components/Reviews'
 import Technologies from './components/Technologies'
 import './home.css'
@@ -29,6 +30,7 @@ const Home = () => {
       <Offer />
       <GrowBusiness />
       <Expertise />
+      <OurProjects />
       <Technologies />
       <EngagementModel />
       <Reviews />

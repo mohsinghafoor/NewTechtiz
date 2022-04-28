@@ -205,3 +205,21 @@ export const clientReviews = [
   ' They have gone above and beyond to make very tight deadlines and exceed my expectations.',
   'They make extraordinary smart and fast and optimize apps ',
 ]
+
+export const ourProjectsData = [
+  {
+    heading: 'Qartt',
+    text: 'Qartt is a UK-based app that connects businesses and delivery partners. In reality, for businesses managing delivery teams and tracking their productivity is a big task. Qartt enables companies to keep a track of their orders, provide riders with optimized delivery routes and allows them to manage their products seamlessly.',
+    image: images.quart1,
+  },
+  {
+    heading: 'Qartt partner',
+    text: 'Qartt is a UK-based delivery company that helps businesses to deliver and keep track of their orders. As coronavirus restrictions drive businesses to become digital, so the gap between the business and customers increased affecting businesses operations as a result of delayed deliveries. Qartt allows businesses to deliver packages while keeping track of personal schedules. It also enables businesses to focus on their product and manage deliveries without making their own delivery team.',
+    image: images.quart2,
+  },
+  {
+    heading: 'Dashboard.earth',
+    text: "It's a weather app, connecting people to local activities that address the realities of climate change in your neighbourhood. As pollution is affecting the global environment, there is a dire need for providing insights to the community so that they can work together to enhance their surrounding environment. Dashboard.earth app provides appropriate ways that can assist you to convert your city’s audacious environment goals into reality.",
+    image: images.dbEarth,
+  },
+]
