@@ -15,7 +15,11 @@ export default function ServicesCard({ servicesData }: any) {
       mt="100px"
     >
       <Stack w="50%" display={{ base: "none", md: "block" }}>
-        <Image src={servicesData.img} maxW="400px" />
+        <Image
+          src={servicesData.img}
+          w={{ base: "280px", lg: "400px" }}
+          maxW="400px"
+        />
       </Stack>
       <VStack align={"flex-start"} w={{ base: "100%", md: "50%" }}>
         <Heading
