@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes as Switch, Route } from 'react-router-dom'
 import Careers from './Pages/Careers'
+import ContactUs from './Pages/ContactUs/Index'
 import Home from './Pages/Home'
 import NotFound from './Pages/NotFound'
 import Porfolio from './Pages/Portfolio'
@@ -14,6 +15,8 @@ const Routes = () => {
       <Route path='/portfolio' element={<Porfolio />} />
       <Route path='/careers' element={<Careers />} />
       <Route path='/services' element={<Services />} />
+      <Route path='/contact-us' element={<ContactUs />} />
+
       <Route path='*' element={<NotFound />} />
     </Switch>
   )

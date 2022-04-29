@@ -13,4 +13,6 @@ export default {
   blueBg: '#E6EDFE',
   imgBg: '#95a63a',
   greyLight: '#656565',
+  greyDark: '#5a7184',
+  linkColor: '#007bff',
 }

@@ -1,20 +1,20 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Heading, Stack, Text } from '@chakra-ui/react'
 
 const data = [
-  { name: "About Us", link: `#` },
-  { name: "Industries", link: `#` },
-  { name: "Portfolio", link: `#` },
-  { name: "Contact Us", link: `#` },
-];
+  { name: 'About Us', link: `#` },
+  { name: 'Industries', link: `#` },
+  { name: 'Portfolio', link: `#` },
+  { name: 'Contact Us', link: `/contact-us` },
+]
 export default function Company() {
   return (
     <Stack>
       <Heading
-        fontSize={"18px"}
-        fontWeight="600"
-        color="white"
-        fontFamily={"DM Sans"}
-        pb="4"
+        fontSize={'18px'}
+        fontWeight='600'
+        color='white'
+        fontFamily={'DM Sans'}
+        pb='4'
       >
         Company
       </Heading>
@@ -22,17 +22,17 @@ export default function Company() {
         <Text
           key={i}
           onClick={() => window.open(data.link)}
-          cursor="pointer"
-          _hover={{ color: "orange" }}
-          fontSize={{ base: "12px", md: "14px", lg: "16px" }}
-          fontWeight="400"
-          color="white"
-          fontFamily={"DM Sans"}
-          pb="2"
+          cursor='pointer'
+          _hover={{ color: 'orange' }}
+          fontSize={{ base: '12px', md: '14px', lg: '16px' }}
+          fontWeight='400'
+          color='white'
+          fontFamily={'DM Sans'}
+          pb='2'
         >
           {data.name}
         </Text>
       ))}
     </Stack>
-  );
+  )
 }

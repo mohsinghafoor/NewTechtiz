@@ -22,4 +22,6 @@ export const images = {
   dbEarth: require('./dbEarth.png'),
   bgCircle: require('./bgcircle.png'),
   bgCircleSmall: require('./bgcirclesmall.png'),
+  contactUsBg: require('./contact-us-bg.png'),
+  contactIcon: require('./contact.png'),
 }

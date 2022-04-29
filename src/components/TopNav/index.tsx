@@ -18,7 +18,7 @@ const TopNav = () => {
 
   const textStyles: TextProps = {
     marginRight: { base: '56px', md: '30px' },
-    fontSize: '16px',
+    fontSize: { base: '12px', md: '14px', lg: '16px' },
   }
 
   return (

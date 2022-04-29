@@ -4,7 +4,7 @@ import Routes from './routes'
 
 function App() {
   return (
-    <Box className='App'>
+    <Box overflow='hidden'>
       <Header />
       <Routes />
     </Box>

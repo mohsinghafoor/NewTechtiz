@@ -32,9 +32,7 @@ const Header = () => {
       zIndex={3}
     >
       <Flex align='center' mr={5}>
-        <Box>
-          <TechtizLogo />
-        </Box>
+        <TechtizLogo />
       </Flex>
 
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
@@ -45,8 +43,8 @@ const Header = () => {
         display={{ base: isOpen ? 'block' : 'none', md: 'flex' }}
         width={{ base: 'full', md: 'auto' }}
         alignItems='center'
-        justifyContent='end'
-        paddingRight='50px'
+        justifyContent={{ md: 'center', lg: 'end' }}
+        paddingRight={{ base: '0px', md: '10px', lg: '50px' }}
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
