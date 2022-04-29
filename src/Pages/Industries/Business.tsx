@@ -16,6 +16,7 @@ import businessImg from "../../assets/businessImg.png";
 import Button from "../../Components/Button";
 import Heading from "../../Components/Heading";
 import Text from "../../Components/Text";
+
 export default function IndustriesBusiness() {
   return (
     <Grid

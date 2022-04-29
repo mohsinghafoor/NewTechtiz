@@ -42,7 +42,6 @@ export default function MVPs() {
             alignItems="center"
             maxW="590px"
             borderLeftRadius={"18px"}
-            // borderRadius={{ base: "18px", md: "0px" }}
           >
             <VStack alignItems="flex-start" mb="30px">
               <Text {...spanStyles}>What we Offer</Text>

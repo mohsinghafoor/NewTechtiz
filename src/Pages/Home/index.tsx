@@ -1,9 +1,12 @@
 import { Heading } from "@chakra-ui/react";
 import Colors from "../../Components/Constants/Colors";
+import Footer from "../Footer";
 import Banner from "./components/Banner";
 import EngagementModel from "./components/EngagementModel";
 import Expertise from "./components/Expertise";
+import GrowBusiness from "./components/GrowBusiness";
 import Offer from "./components/Offer";
+import OurProjects from "./components/OurProjects";
 import Reviews from "./components/Reviews";
 import Technologies from "./components/Technologies";
 import "./home.css";
@@ -25,11 +28,14 @@ const Home = () => {
         tech-driven digital solutions
       </Heading>
       <Offer />
+      <GrowBusiness />
       <Expertise />
+      <OurProjects />
       <Technologies />
-
       <EngagementModel />
       <Reviews />
+
+      <Footer />
     </>
   );
 };

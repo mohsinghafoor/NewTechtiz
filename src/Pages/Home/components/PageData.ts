@@ -2,7 +2,7 @@ import { images } from '../../../assets/images'
 
 export const IconsData = [
   { icon: images.ideationIcon, text: 'Ideation & Discovery' },
-  { icon: images.softwareDevIcon, text: 'Custom Software Development' },
+  { icon: images.softwareDevIcon, text: 'Custom  Development' },
   { icon: images.teamArgumentIcon, text: 'Team Augmentation' },
   { icon: images.designIcon, text: 'Product Designer' },
   { icon: images.supportIcon, text: 'Support & Maintenance' },
@@ -152,5 +152,74 @@ export const TechStacks = [
         imageUrl: 'https://techtiz.co/wp-content/uploads/2022/03/Node-jS.svg',
       },
     ],
+  },
+]
+
+export const GrowBusinessData = [
+  {
+    heading: 'Startups',
+    list: [
+      'Supporting businesses right from the ideation phase by analyzing the feasibility of their digital products',
+      'Rapid development of MVPs to get better insights of market trends and the demands of potential customers',
+      'Bringing together valuable resources to help your business establish its foundations and boost productivity.',
+    ],
+  },
+
+  {
+    heading: 'SMEs',
+    list: [
+      'Development of innovative digital applications to turn the idea behind your business into a reality',
+      'Team augmentation with technical training and expert assistance to boost business development and growth',
+      'Implementation of a client-centric approach with superlative technologies for web & mobile app development',
+    ],
+  },
+
+  {
+    heading: 'Enterprises',
+    list: [
+      'Optimizing business operations and streamlining workflows with customized and functional software',
+      'Improving the efficiency of your existing digital solutions by upgrading the right features and designs',
+      'Empowering your staff with skills to successfully achieve business goals and develop a greater digital footprint',
+    ],
+  },
+]
+
+export const GrowBusinessImages = [
+  images.startup,
+  images.smallC,
+  images.enterprise,
+]
+
+export const clientData = [
+  {
+    name: 'Norbu Snow-Shiva',
+    company: 'COO World Tree Consulting',
+  },
+  {
+    name: 'Norbu Snow-Shiva2',
+    company: 'COO World Tree Consulting',
+  },
+]
+
+export const clientReviews = [
+  ' They have gone above and beyond to make very tight deadlines and exceed my expectations.',
+  'They make extraordinary smart and fast and optimize apps ',
+]
+
+export const ourProjectsData = [
+  {
+    heading: 'Qartt',
+    text: 'Qartt is a UK-based app that connects businesses and delivery partners. In reality, for businesses managing delivery teams and tracking their productivity is a big task. Qartt enables companies to keep a track of their orders, provide riders with optimized delivery routes and allows them to manage their products seamlessly.',
+    image: images.quart1,
+  },
+  {
+    heading: 'Qartt partner',
+    text: 'Qartt is a UK-based delivery company that helps businesses to deliver and keep track of their orders. As coronavirus restrictions drive businesses to become digital, so the gap between the business and customers increased affecting businesses operations as a result of delayed deliveries. Qartt allows businesses to deliver packages while keeping track of personal schedules. It also enables businesses to focus on their product and manage deliveries without making their own delivery team.',
+    image: images.quart2,
+  },
+  {
+    heading: 'Dashboard.earth',
+    text: "It's a weather app, connecting people to local activities that address the realities of climate change in your neighbourhood. As pollution is affecting the global environment, there is a dire need for providing insights to the community so that they can work together to enhance their surrounding environment. Dashboard.earth app provides appropriate ways that can assist you to convert your city’s audacious environment goals into reality.",
+    image: images.dbEarth,
   },
 ]

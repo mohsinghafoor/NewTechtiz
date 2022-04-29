@@ -13,4 +13,13 @@ export const images = {
   quotes: require('./quotes.png'),
   person: require('./person.png'),
   clutch: require('./clutch.png'),
+  enterprise: require('./epr.jpg'),
+  smallC: require('./small-c.png'),
+  startup: require('./startup.png'),
+  listBullet: require('./list-bullet.png'),
+  quart1: require('./quart-1.png'),
+  quart2: require('./quart2.png'),
+  dbEarth: require('./dbEarth.png'),
+  bgCircle: require('./bgcircle.png'),
+  bgCircleSmall: require('./bgcirclesmall.png'),
 }
