@@ -21,7 +21,7 @@ import educationImg from "../../assets/educationImg.png";
 
 export default function EducationIndustry() {
   return (
-    <VStack pt="100px" pb="100px">
+    <VStack pt="150px" pb="100px">
       <Heading {...headingStyles}>Education Sector</Heading>
       <Text {...textStyles}>
         With digital learning becoming the new normal, TechTiz considers the
@@ -36,7 +36,7 @@ export default function EducationIndustry() {
               py="50px"
               px={{ base: "10px", md: "50px" }}
               alignItems="center"
-              maxW="590px"
+              maxW="600px"
               borderRadius={"19px"}
             >
               <VStack alignItems="flex-start" mb="30px">
@@ -45,28 +45,28 @@ export default function EducationIndustry() {
                   Design, development, and implementation of educational
                   applications
                 </Heading>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} h="40px">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Interactive applications for toddlers
                   </Text>
                 </HStack>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} h="40px">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Custom-built applications
                   </Text>
                 </HStack>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} h="40px">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Applications for the distribution of educational content
                   </Text>
                 </HStack>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} h="40px">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Learning Management Software
                   </Text>
                 </HStack>
               </VStack>

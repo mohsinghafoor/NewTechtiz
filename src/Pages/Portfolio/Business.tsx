@@ -16,13 +16,11 @@ import businessImg from "../../assets/businessImg.png";
 import Button from "../../Components/Button";
 import Heading from "../../Components/Heading";
 import Text from "../../Components/Text";
-export default function IndustriesBusiness() {
+export default function Business() {
   return (
     <Grid
       templateColumns="repeat(12, 1fr)"
       gap={0}
-      bgImage={bgImg}
-      bgSize="cover"
       alignItems={"center"}
       pt="150px"
     >

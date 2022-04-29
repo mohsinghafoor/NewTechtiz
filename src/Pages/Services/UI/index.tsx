@@ -91,7 +91,11 @@ const whatWeOfferData = [
 ];
 export default function UI() {
   return (
-    <Stack align={"center"}>
+    <Stack
+      align={"center"}
+      pt="200px"
+      background=" linear-gradient(134.89deg, #EBF1FF 14.48%, rgba(244, 247, 255, 0) 87.06%)"
+    >
       {introData.map((introData, index) => (
         <Intro key={index} introData={introData} />
       ))}

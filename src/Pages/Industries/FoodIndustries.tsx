@@ -41,32 +41,32 @@ export default function FoodIndustries() {
               supplies
             </Heading>
             <VStack alignItems="flex-start" mb="30px">
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} h="40px">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
                   Inventory management systems for food suppliers
                 </Text>
               </HStack>
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} h="40px">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
-                  Inventory management systems for food suppliers
+                  Delivery tracking software
                 </Text>
               </HStack>
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} h="40px">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
-                  Inventory management systems for food suppliers
+                  User-friendly and efficient mobile applications
                 </Text>
               </HStack>
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} h="40px">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
-                  Inventory management systems for food suppliers
+                  Validation and standardization of data
                 </Text>
               </HStack>
             </VStack>
-            <Button {...btnStyles}>Let's Talk</Button>
+            <Button {...btnStyles}>Let’s Discuss a Project</Button>
           </Box>
         </Stack>
       </GridItem>

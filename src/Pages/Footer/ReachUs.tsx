@@ -10,13 +10,7 @@ const data = [
 export default function ReachUs() {
   return (
     <Stack>
-      <Heading
-        fontSize={"18px"}
-        fontWeight="600"
-        color="white"
-        fontFamily={"DM Sans"}
-        pb="4"
-      >
+      <Heading fontSize={"18px"} fontWeight="600" color="white" pb="4">
         Reach Us
       </Heading>
       {data.map((data, i) => (
@@ -37,7 +31,6 @@ export default function ReachUs() {
             fontSize={{ base: "12px", md: "14px", lg: "16px" }}
             fontWeight="500"
             color="white"
-            fontFamily={"DM Sans"}
             pb="2"
             maxW={{ base: "100px", lg: "140px" }}
           >

@@ -36,28 +36,29 @@ export default function ECommerce() {
             </Heading>
           </Stack>
           <Stack pb="40px">
-            <HStack alignItems={"flex-start"}>
+            <HStack alignItems={"flex-start"} pb="3">
               <Image src={vector} mt="7px" />
               <Text {...pointerStyles} my="0">
-                Inventory management systems for food suppliers
+                Custom designs and themes
               </Text>
             </HStack>
-            <HStack alignItems={"flex-start"}>
+
+            <HStack alignItems={"flex-start"} pb="3">
               <Image src={vector} mt="7px" />
               <Text {...pointerStyles} my="0">
-                Inventory management systems for food suppliers
+                Descriptive and visually pleasing apps
               </Text>
             </HStack>
-            <HStack alignItems={"flex-start"}>
+            <HStack alignItems={"flex-start"} pb="3">
               <Image src={vector} mt="7px" />
               <Text {...pointerStyles} my="0">
-                Inventory management systems for food suppliers
+                Use of latest technologies for improving quality
               </Text>
             </HStack>
-            <HStack alignItems={"flex-start"}>
+            <HStack alignItems={"flex-start"} pb="3">
               <Image src={vector} mt="7px" />
               <Text {...pointerStyles} my="0">
-                Inventory management systems for food suppliers
+                Optimized software for effective monitoring
               </Text>
             </HStack>
           </Stack>

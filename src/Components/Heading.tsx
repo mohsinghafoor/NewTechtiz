@@ -13,7 +13,7 @@ const Heading = ({ children, ...props }: HeadingProps) => {
 const btnStyles: HeadingProps = {
   fontFamily: "DM Sans",
   fontWeight: 700,
-  fontSize: { base: "32px", md: "40px" },
+  fontSize: { base: "32px", md: "48px" },
   lineHeight: { base: "40px", md: "60px" },
   color: "#032E9B",
   mb: "20px",

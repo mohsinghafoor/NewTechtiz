@@ -7,11 +7,15 @@ import bulb from "./assets/bulb.png";
 import shield from "./assets/shield.png";
 import customers from "./assets/customers.png";
 import tools from "./assets/tools.png";
+import customized from "./assets/customized.png";
+import ecommerce from "./assets/ecommerce.png";
+import optimization from "./assets/optimization.png";
 import Intro from "../Components/Intro";
 import OurServices from "../Components/OurServices";
-import { Heading, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
 import CrossFunctionalApps from "../Components/CrossFunctionalApps";
 import Footer from "../../Footer";
+import WhatWeOffer from "../Components/WhatWeOffer";
 const introData = [
   {
     img: introImg,
@@ -71,9 +75,33 @@ const crossAppData = [
     text: `Incorporating feature updates seamlessly while maintaining the originality of your customized web application..`,
   },
 ];
+const whatWeOfferData = [
+  {
+    logo: customized,
+    heading: `Customized Web Applications`,
+    text: `We build your custom web applications from scratch and update/add new functionalities to existing software.`,
+    btnText: `Estimate Project`,
+  },
+  {
+    logo: ecommerce,
+    heading: `E-commerce Websites`,
+    text: `We develop stunning, highly responsive, and optimized e-commerce websites with modules and payment methods of your choice.`,
+    btnText: `Get Started`,
+  },
+  {
+    logo: optimization,
+    heading: `Optimization & Maintenance`,
+    text: `We take the responsibility of bringing a degrading application back to life with updates, big fixes, and design improvements.`,
+    btnText: `Discuss a Project`,
+  },
+];
 export default function WebDevelopment() {
   return (
-    <Stack align={"center"}>
+    <Stack
+      align={"center"}
+      pt="200px"
+      background=" linear-gradient(134.89deg, #EBF1FF 14.48%, rgba(244, 247, 255, 0) 87.06%)"
+    >
       {introData.map((introData, index) => (
         <Intro key={index} introData={introData} />
       ))}
@@ -101,9 +129,32 @@ export default function WebDevelopment() {
       >
         Cross-Functional Web App Development to Unlock Infinite Possibilities
       </Heading>
-      {crossAppData.map((crossAppData, index) => (
-        <CrossFunctionalApps key={index} crossAppData={crossAppData} />
-      ))}
+      <Grid templateColumns="repeat(12, 1fr)" gap={2} py="35px">
+        {crossAppData.map((crossAppData, index) => (
+          <GridItem colSpan={{ base: 12, md: 6 }}>
+            <CrossFunctionalApps key={index} crossAppData={crossAppData} />
+          </GridItem>
+        ))}
+      </Grid>
+      <Heading
+        color="#00164D"
+        fontWeight={"700"}
+        fontSize={{ base: "30px", md: "36px" }}
+        fontFamily={"DM Sans"}
+        py="50px"
+        // mx={{ base: "5", md: "0" }}
+        maxW={"750px"}
+        textAlign="center"
+      >
+        What We offer
+      </Heading>
+      <Grid templateColumns="repeat(12, 1fr)" gap={"25px"} py="35px">
+        {whatWeOfferData.map((whatWeOfferData, index) => (
+          <GridItem colSpan={{ base: 12, md: 4 }} py="25px">
+            <WhatWeOffer whatWeOfferData={whatWeOfferData} />
+          </GridItem>
+        ))}
+      </Grid>
       <Footer />
     </Stack>
   );

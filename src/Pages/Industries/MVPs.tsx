@@ -21,7 +21,7 @@ import WhiteButton from "../../Components/ButtonWhite";
 
 export default function MVPs() {
   return (
-    <Stack align={"center"} px="1" mb="30px">
+    <Stack align={"center"} px="1" mb="150px">
       <HStack maxW="950px" spacing={{ base: "none", md: "150px" }}>
         <Image src={blockImg} display={{ base: "none", md: "block" }} />
         <VStack alignItems={{ base: "center", md: "flex-start" }}>
@@ -42,7 +42,7 @@ export default function MVPs() {
             alignItems="center"
             maxW="590px"
             borderLeftRadius={"18px"}
-            borderRadius={{ base: "18px", md: "0px" }}
+            // borderRadius={{ base: "18px", md: "0px" }}
           >
             <VStack alignItems="flex-start" mb="30px">
               <Text {...spanStyles}>What we Offer</Text>
@@ -50,22 +50,22 @@ export default function MVPs() {
                 Design, development, and implementation of educational
                 applications
               </Heading>
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} pb="3">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
-                  Inventory management systems for food suppliers
+                  MVP software to test the idea behind new product
                 </Text>
               </HStack>
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} pb="3">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
-                  Inventory management systems for food suppliers
+                  Improved market research and competitor analysis
                 </Text>
               </HStack>
-              <HStack alignItems={"flex-start"}>
+              <HStack alignItems={"flex-start"} pb="3">
                 <Image src={vector} mt="7px" />
                 <Text {...pointerStyles} my="0">
-                  Inventory management systems for food suppliers
+                  Evaluation of customer feedback through MVPs
                 </Text>
               </HStack>
             </VStack>

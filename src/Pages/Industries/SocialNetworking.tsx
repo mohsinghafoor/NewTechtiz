@@ -37,7 +37,7 @@ export default function SocialNetwork() {
             <Stack
               py="50px"
               px={{ base: "10px", md: "50px" }}
-              alignItems="center"
+              alignItems="flex-start"
               maxW="590px"
               borderRadius={"19px"}
             >
@@ -47,28 +47,22 @@ export default function SocialNetwork() {
                   Design, development, and implementation of educational
                   applications
                 </Heading>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} pb="3">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Community building applications
                   </Text>
                 </HStack>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} pb="3">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Customized applications for instant messaging
                   </Text>
                 </HStack>
-                <HStack alignItems={"flex-start"}>
+                <HStack alignItems={"flex-start"} pb="3">
                   <Image src={vector} mt="7px" />
                   <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
-                  </Text>
-                </HStack>
-                <HStack alignItems={"flex-start"}>
-                  <Image src={vector} mt="7px" />
-                  <Text {...pointerStyles} my="0">
-                    Inventory management systems for food suppliers
+                    Maintenance and support to eliminate bugs
                   </Text>
                 </HStack>
               </VStack>
@@ -104,7 +98,7 @@ const textStyles: TextProps = {
   lineHeight: { base: "26px", md: "36px" },
   color: "#2e2e2e",
   textAlign: "center",
-  maxW: "692px",
+  maxW: "602px",
 };
 const pointerStyles: TextProps = {
   fontFamily: "DM Sans",
@@ -124,7 +118,7 @@ const pointerHeadingStyles: HeadingProps = {
   fontWeight: 700,
   fontSize: { base: "18px", md: "24px" },
   lineHeight: { base: "26px", md: "36px" },
-
+  pb: "5",
   color: "#00164D",
   maxW: "500px",
 };

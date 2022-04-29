@@ -4,13 +4,15 @@ export default function ServicesCard({ servicesData }: any) {
   return (
     <Flex
       bg=" #032E9B"
-      w={{ base: "360px", sm: "650px", lg: "961px" }}
+      w="90%"
       align={"center"}
+      maxW="1000px"
       direction={servicesData.left ? "row" : "row-reverse"}
       p={{ base: "40px", md: "50px" }}
       rounded={"20px"}
       my={"20px"}
       minH="450px"
+      mt="100px"
     >
       <Stack w="50%" display={{ base: "none", md: "block" }}>
         <Image src={servicesData.img} maxW="400px" />
