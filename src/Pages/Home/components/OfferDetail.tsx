@@ -30,6 +30,7 @@ const OfferDetail = (props: Props) => {
         maxWidth='713px'
         borderRadius='8px'
         alignItems='flex-start'
+        width='62%'
       >
         <Heading textAlign='start'>{heading}</Heading>
         <Text textAlign='start' m='20px 0 15px !important'>

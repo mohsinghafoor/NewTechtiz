@@ -46,10 +46,10 @@ const GrowBusiness = () => {
         <HStack
           w='full'
           padding='20px'
-          justifyContent='center'
+          justifyContent={{ base: 'start', md: 'center' }}
           mt='50px !important'
         >
-          <Box w='50%'>
+          <Box w={{ base: '100%', md: '50%' }}>
             <Accordion
               allowToggle
               w='100%'
@@ -125,7 +125,7 @@ const GrowBusiness = () => {
             </Accordion>
           </Box>
 
-          <Box paddingLeft='80px'>
+          <Box paddingLeft='80px' display={{ base: 'none', md: 'block' }}>
             {GrowBusinessImages.map(
               (image, index) =>
                 index === selectedImage && (

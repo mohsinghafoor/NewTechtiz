@@ -29,15 +29,21 @@ const Offer = () => {
             fontWeight={700}
             fontSize='40px'
             lineHeight='64px'
+            textAlign={{ base: 'center', md: 'start' }}
           >
             What we offer
           </Heading>
-          <Text color={Colors.darkBlue} fontSize='20px' lineHeight='30px'>
+          <Text
+            color={Colors.darkBlue}
+            fontSize='20px'
+            lineHeight='30px'
+            display={{ base: 'none', md: 'block' }}
+          >
             Customize Your Software from the start and establish your business
             in style
           </Text>
         </Box>
-        <Box pl='62px' my='55px'>
+        <Box pl='62px' my='55px' display={{ base: 'none', md: 'block' }}>
           <HStack alignItems='center' flexWrap='wrap' shouldWrapChildren>
             {IconsData.map((item, index) => (
               <Flex
@@ -75,51 +81,56 @@ const Offer = () => {
             ))}
           </HStack>
         </Box>
-        <Carousel
-          showArrows={false}
-          showStatus={false}
-          selectedItem={active}
-          infiniteLoop={true}
-          showThumbs={false}
-          onChange={(e) => setActive(e)}
-          renderIndicator={(onClickHandler, isSelected, index, label) => {
-            const defStyle = {
-              margin: '0 4px',
-              background: Colors.lightBlue,
-              cursor: 'pointer',
-              bottom: '-15px',
-              left: '-100px',
-            }
-            const style = isSelected
-              ? { ...defStyle, background: Colors.blueSecondary }
-              : { ...defStyle }
-            return (
-              <Box
-                style={style}
-                onClick={onClickHandler}
-                onKeyDown={onClickHandler}
+        <Box display={{ base: 'none', md: 'block' }}>
+          <Carousel
+            showArrows={false}
+            showStatus={false}
+            selectedItem={active}
+            infiniteLoop={true}
+            showThumbs={false}
+            onChange={(e) => setActive(e)}
+            renderIndicator={(onClickHandler, isSelected, index, label) => {
+              const defStyle = {
+                margin: '0 4px',
+                background: Colors.lightBlue,
+                cursor: 'pointer',
+                bottom: '-15px',
+                left: '-100px',
+              }
+              const style = isSelected
+                ? { ...defStyle, background: Colors.blueSecondary }
+                : { ...defStyle }
+              return (
+                <Box
+                  style={style}
+                  onClick={onClickHandler}
+                  onKeyDown={onClickHandler}
+                  key={index}
+                  role='button'
+                  tabIndex={0}
+                  aria-label={`${label} ${index + 1}`}
+                  display='inline-block'
+                  height='16px'
+                  width='16px'
+                  borderRadius='50%'
+                  position='relative'
+                ></Box>
+              )
+            }}
+          >
+            {offerData.map((item, index) => (
+              <OfferDetail
+                heading={item.heading}
+                text={item.text}
+                imageUrl={item.imageUrl}
                 key={index}
-                role='button'
-                tabIndex={0}
-                aria-label={`${label} ${index + 1}`}
-                display='inline-block'
-                height='16px'
-                width='16px'
-                borderRadius='50%'
-                position='relative'
-              ></Box>
-            )
-          }}
-        >
-          {offerData.map((item, index) => (
-            <OfferDetail
-              heading={item.heading}
-              text={item.text}
-              imageUrl={item.imageUrl}
-              key={index}
-            />
-          ))}
-        </Carousel>
+              />
+            ))}
+          </Carousel>
+        </Box>
+        {/* <Box>
+
+        </Box> */}
       </Container>
     </Flex>
   )

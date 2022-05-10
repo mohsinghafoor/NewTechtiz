@@ -26,6 +26,7 @@ const Expertise = () => {
           justifyContent='center'
           alignItems='center'
           cursor='pointer'
+          flexWrap='wrap'
         >
           {OurExpertise.map((item, index) => (
             <ExpertiseCard

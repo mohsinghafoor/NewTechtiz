@@ -77,6 +77,7 @@ const BannerData = (props: Props) => {
         height={'506px'}
         width={{ base: '403', md: '603px' }}
         mt={{ base: '70px !important', md: 'none' }}
+        display={{ base: 'none', md: 'block' }}
       >
         <Image
           src={imageUrl}
