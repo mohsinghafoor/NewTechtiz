@@ -85,10 +85,10 @@ const OurProjects = () => {
           alignItems='center'
           justifyContent='center'
           flex='1'
-          paddingTop='80px'
-          paddingBottom='140px'
+          paddingTop='100px'
+          paddingBottom='150px'
         >
-          <Image src={images.quart1} width='560px' height='600px' />
+          <Image src={images.quart1} width='460px' height='560px' />
         </Flex>
       </Flex>
     </VStack>

@@ -19,14 +19,24 @@ interface Props {
 const BannerData = (props: Props) => {
   const { heading, text, imageUrl } = props
   return (
-    <HStack px={{ sm: 3, md: 5, lg: 8 }} py={7} pb='85px'>
+    <HStack
+      px={{ sm: 3, md: 5, lg: 8 }}
+      py={7}
+      pb='85px'
+      maxWidth='100%'
+      flexDirection={{ sm: 'column', md: 'row' }}
+    >
       <VStack
         color={Colors.white}
         textAlign='start'
         alignItems='start'
-        width='55%'
+        width={{ sm: ' 90%', md: '50%' }}
+        mt={{ sm: '50px', md: 'none' }}
       >
-        <Heading fontSize='48px' lineHeight='72px' width='80%'>
+        <Heading
+          fontSize={{ base: '34px', sm: '38px', md: '42px', lg: '48px' }}
+          lineHeight={{ base: '42px', sm: '52px', md: '62px', lg: '72px' }}
+        >
           {heading}
         </Heading>
         <Text fontFamily='dm sans' width='full' padding='10px 0 40px'>
@@ -62,12 +72,17 @@ const BannerData = (props: Props) => {
           </Button>
         </HStack>
       </VStack>
-      <Box mr='40px' display={{ sm: 'none', md: 'flex' }} width='45%'>
+      <Box
+        mr='40px'
+        height={'506px'}
+        width={{ base: '403', md: '603px' }}
+        mt={{ base: '70px !important', md: 'none' }}
+      >
         <Image
           src={imageUrl}
-          height='506px'
-          width='603px'
           className='banner-image'
+          minH={'100%'}
+          maxW='100%'
         />
       </Box>
     </HStack>

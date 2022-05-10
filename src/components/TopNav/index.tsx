@@ -18,7 +18,9 @@ const TopNav = () => {
 
   const textStyles: TextProps = {
     marginRight: { base: '56px', md: '30px' },
-    fontSize: { base: '12px', md: '14px', lg: '16px' },
+    fontSize: { base: '18px', md: '14px', lg: '16px' },
+    padding: { base: '4px 0 18px', md: 'unset' },
+    fontWeight: { base: 600 },
   }
 
   return (
@@ -29,7 +31,7 @@ const TopNav = () => {
 
           {(currentPage === item.name ||
             (currentPage === '' && item.name === 'Home')) && (
-            <Box bgColor={Colors.white} w='33%' h='2px'></Box>
+            <Box bgColor={{ md: Colors.white }} w='33%' h='2px'></Box>
           )}
         </Link>
       ))}

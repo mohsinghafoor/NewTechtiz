@@ -5,6 +5,9 @@ const CustomTheme = extendTheme({
     body: 'DM Sans ',
     heading: 'DM Sans ',
   },
+  breakpoints: {
+    md: '840px',
+  },
 })
 
 export default CustomTheme

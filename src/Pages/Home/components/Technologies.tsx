@@ -1,4 +1,4 @@
-import { Heading, Text, VStack, HStack, Image } from '@chakra-ui/react'
+import { Heading, Text, VStack, HStack, Image, Flex } from '@chakra-ui/react'
 import { useState, SetStateAction } from 'react'
 import Colors from '../../../components/Constants/Colors'
 import { Technology, TechStacks } from './PageData'
@@ -26,47 +26,51 @@ const Technologies = () => {
         We are a multi-platform app development company with <br /> modern
         technologies in our arsenal
       </Text>
-      <VStack padding='0 80px' alignItems='center' w='full'>
-        <HStack w='100%' justifyContent='space-around' mb='60px'>
-          {Technology.map((item, index) => (
-            <Text
-              key={index}
-              color={index === active ? Colors.blueSecondary : Colors.disabled}
-              onClick={() => handleTechStack(index)}
-              cursor='pointer'
-              fontWeight={index === active ? 700 : 400}
-              fontSize='24px'
-              lineHeight='32px'
-            >
-              {item}
-            </Text>
-          ))}
-        </HStack>
-        {TechStacks.map((item, index) => (
-          <HStack key={index} width='100%' alignItems='center'>
-            {index === active &&
-              Object.values(item)[0].map((tech: any) => (
-                <VStack p='0' w='25%'>
-                  <Image
-                    src={tech.imageUrl}
-                    alt='icon'
-                    width='90px'
-                    height='100px'
-                    marginBottom='34px'
-                  />
-                  <Text
-                    fontSize='24px'
-                    lineHeight='32px'
-                    color={Colors.subHeading}
-                    fontWeight={500}
-                  >
-                    {tech.text}
-                  </Text>
-                </VStack>
-              ))}
+      <Flex w='full' justifyContent='center'>
+        <VStack padding='0 80px' alignItems='center' maxW={'1440px'} flex='1'>
+          <HStack w='100%' justifyContent='space-around' mb='60px'>
+            {Technology.map((item, index) => (
+              <Text
+                key={index}
+                color={
+                  index === active ? Colors.blueSecondary : Colors.disabled
+                }
+                onClick={() => handleTechStack(index)}
+                cursor='pointer'
+                fontWeight={index === active ? 700 : 400}
+                fontSize='24px'
+                lineHeight='32px'
+              >
+                {item}
+              </Text>
+            ))}
           </HStack>
-        ))}
-      </VStack>
+          {TechStacks.map((item, index) => (
+            <HStack key={index} width='100%' alignItems='center'>
+              {index === active &&
+                Object.values(item)[0].map((tech: any) => (
+                  <VStack p='0' w='25%'>
+                    <Image
+                      src={tech.imageUrl}
+                      alt='icon'
+                      width='90px'
+                      height='100px'
+                      marginBottom='34px'
+                    />
+                    <Text
+                      fontSize='24px'
+                      lineHeight='32px'
+                      color={Colors.subHeading}
+                      fontWeight={500}
+                    >
+                      {tech.text}
+                    </Text>
+                  </VStack>
+                ))}
+            </HStack>
+          ))}
+        </VStack>
+      </Flex>
     </VStack>
   )
 }
