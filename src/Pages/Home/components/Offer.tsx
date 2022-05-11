@@ -6,134 +6,151 @@ import {
   Heading,
   HStack,
   Image,
+  Stack,
   Text,
-} from '@chakra-ui/react'
-import Colors from '../../../components/Constants/Colors'
-import OfferDetail from './OfferDetail'
-import { Carousel } from 'react-responsive-carousel'
-import { IconsData, offerData } from './PageData'
-import { SetStateAction, useState } from 'react'
+} from "@chakra-ui/react";
+import Colors from "../../../Components/Constants/Colors";
+import OfferDetail from "./OfferDetail";
+import { Carousel } from "react-responsive-carousel";
+import { IconsData, offerData } from "./PageData";
+import { SetStateAction, useState } from "react";
+import OfferMbl from "./OfferMbl";
 
 const Offer = () => {
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(0);
 
   const ShowOffer = (index: SetStateAction<number>) => {
-    setActive(index)
-  }
+    setActive(index);
+  };
   return (
-    <Flex w='100%' justifyContent='center'>
-      <Container w='full' maxW='1440px' mb='30px' p={0}>
-        <Box pl='60px'>
-          <Heading
-            color={Colors.bluePrimary}
-            fontWeight={700}
-            fontSize='40px'
-            lineHeight='64px'
-            textAlign={{ base: 'center', md: 'start' }}
+    <>
+      <OfferMbl />
+      <Flex
+        w="100%"
+        justifyContent="center"
+        display={{ base: "none", sm: "flex" }}
+      >
+        <Container w="full" maxW="1440px" mb="30px" p={0}>
+          <Stack
+            pl={{ base: 7, md: "100px" }}
+            maxW="1250px"
+            w="full"
+            pb={{ base: "60px", md: "20px" }}
           >
-            What we offer
-          </Heading>
-          <Text
-            color={Colors.darkBlue}
-            fontSize='20px'
-            lineHeight='30px'
-            display={{ base: 'none', md: 'block' }}
+            <Heading
+              color={Colors.bluePrimary}
+              fontWeight={700}
+              fontSize="40px"
+              textAlign="start"
+            >
+              What We Offer
+            </Heading>
+            <Text
+              color={Colors.darkBlue}
+              fontSize="20px"
+              lineHeight="30px"
+              display={{ base: "none", sm: "block" }}
+            >
+              Customize Your Software from the start and establish your business
+              in style
+            </Text>
+          </Stack>
+          <Box
+            pl={{ base: 7, md: "100px" }}
+            my="55px"
+            display={{ base: "none", md: "block" }}
           >
-            Customize Your Software from the start and establish your business
-            in style
-          </Text>
-        </Box>
-        <Box pl='62px' my='55px' display={{ base: 'none', md: 'block' }}>
-          <HStack alignItems='center' flexWrap='wrap' shouldWrapChildren>
-            {IconsData.map((item, index) => (
-              <Flex
-                key={index}
-                onClick={() => ShowOffer(index)}
-                cursor='pointer'
-                margin='20px 0px'
-              >
-                <Circle
-                  size='70px'
-                  bg={index === active ? Colors.purple : Colors.white}
-                  shadow='0px 3px 14px rgba(0, 0, 0, 0.25)'
-                >
-                  <Image
-                    src={item.icon}
-                    alt='icon'
-                    filter={
-                      index === 0
-                        ? 'invert(30%) sepia(30%) saturate(6238%) hue-rotate(344deg) brightness(108%) contrast(98%)'
-                        : 'auto'
-                    }
-                  />
-                </Circle>
-                <Text
-                  fontWeight={index === active ? 600 : 400}
-                  fontSize='20px'
-                  lineHeight='30px'
-                  marginLeft='16px'
-                  w='139px'
-                  mt='10px'
-                >
-                  {item.text}
-                </Text>
-              </Flex>
-            ))}
-          </HStack>
-        </Box>
-        <Box display={{ base: 'none', md: 'block' }}>
-          <Carousel
-            showArrows={false}
-            showStatus={false}
-            selectedItem={active}
-            infiniteLoop={true}
-            showThumbs={false}
-            onChange={(e) => setActive(e)}
-            renderIndicator={(onClickHandler, isSelected, index, label) => {
-              const defStyle = {
-                margin: '0 4px',
-                background: Colors.lightBlue,
-                cursor: 'pointer',
-                bottom: '-15px',
-                left: '-100px',
-              }
-              const style = isSelected
-                ? { ...defStyle, background: Colors.blueSecondary }
-                : { ...defStyle }
-              return (
-                <Box
-                  style={style}
-                  onClick={onClickHandler}
-                  onKeyDown={onClickHandler}
+            <HStack alignItems="center" flexWrap="wrap" shouldWrapChildren>
+              {IconsData.map((item, index) => (
+                <Flex
                   key={index}
-                  role='button'
-                  tabIndex={0}
-                  aria-label={`${label} ${index + 1}`}
-                  display='inline-block'
-                  height='16px'
-                  width='16px'
-                  borderRadius='50%'
-                  position='relative'
-                ></Box>
-              )
-            }}
-          >
-            {offerData.map((item, index) => (
-              <OfferDetail
-                heading={item.heading}
-                text={item.text}
-                imageUrl={item.imageUrl}
-                key={index}
-              />
-            ))}
-          </Carousel>
-        </Box>
-        {/* <Box>
+                  onClick={() => ShowOffer(index)}
+                  cursor="pointer"
+                  margin="20px 0px"
+                >
+                  <Circle
+                    size="70px"
+                    bg={index === active ? Colors.purple : Colors.white}
+                    shadow="0px 3px 14px rgba(0, 0, 0, 0.25)"
+                  >
+                    <Image
+                      src={item.icon}
+                      alt="icon"
+                      filter={
+                        index === 0
+                          ? "invert(30%) sepia(30%) saturate(6238%) hue-rotate(344deg) brightness(108%) contrast(98%)"
+                          : "auto"
+                      }
+                    />
+                  </Circle>
+                  <Text
+                    fontWeight={index === active ? 600 : 400}
+                    fontSize="20px"
+                    lineHeight="30px"
+                    marginLeft="16px"
+                    w="139px"
+                    mt="10px"
+                  >
+                    {item.text}
+                  </Text>
+                </Flex>
+              ))}
+            </HStack>
+          </Box>
+          <Box display={{ base: "none", sm: "block" }}>
+            <Carousel
+              showArrows={false}
+              showStatus={false}
+              selectedItem={active}
+              infiniteLoop={true}
+              showThumbs={false}
+              onChange={(e) => setActive(e)}
+              renderIndicator={(onClickHandler, isSelected, index, label) => {
+                const defStyle = {
+                  margin: "0 4px",
+                  background: Colors.lightBlue,
+                  cursor: "pointer",
+                  bottom: "-15px",
+                  left: "-150px",
+                };
+                const style = isSelected
+                  ? { ...defStyle, background: Colors.blueSecondary }
+                  : { ...defStyle };
+                return (
+                  <Box
+                    style={style}
+                    onClick={onClickHandler}
+                    onKeyDown={onClickHandler}
+                    key={index}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`${label} ${index + 1}`}
+                    display="inline-block"
+                    height="16px"
+                    width="16px"
+                    borderRadius="50%"
+                    position="relative"
+                  ></Box>
+                );
+              }}
+            >
+              {offerData.map((item, index) => (
+                <OfferDetail
+                  heading={item.heading}
+                  text={item.text}
+                  imageUrl={item.imageUrl}
+                  key={index}
+                />
+              ))}
+            </Carousel>
+          </Box>
+          {/* <Box>
 
         </Box> */}
-      </Container>
-    </Flex>
-  )
-}
+        </Container>
+      </Flex>
+    </>
+  );
+};
 
-export default Offer
+export default Offer;

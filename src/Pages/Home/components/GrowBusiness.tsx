@@ -1,4 +1,4 @@
-import { MinusIcon } from '@chakra-ui/icons'
+import { MinusIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -15,50 +15,50 @@ import {
   Text,
   VStack,
   Flex,
-} from '@chakra-ui/react'
-import React, { useState } from 'react'
-import { images } from '../../../assets/images'
-import Colors from '../../../components/Constants/Colors'
-import { GrowBusinessData, GrowBusinessImages } from './PageData'
+} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { images } from "../../../assets/images";
+import Colors from "../../../Components/Constants/Colors";
+import { GrowBusinessData, GrowBusinessImages } from "./PageData";
 
 const GrowBusiness = () => {
-  const [selectedImage, setSelectedImage] = useState<any>(0)
-  const [expanded, setExpanded] = useState(false)
+  const [selectedImage, setSelectedImage] = useState<any>(0);
+  const [expanded, setExpanded] = useState(false);
 
   return (
-    <Flex justify='center'>
+    <Flex justify="center">
       <VStack
-        w='full'
-        alignItems='center'
-        justifyContent='center'
-        maxWidth='1440px'
+        w="full"
+        alignItems="center"
+        justifyContent="center"
+        maxWidth="1440px"
       >
         <Heading
           color={Colors.bluePrimary}
           fontWeight={700}
-          fontSize='40px'
-          lineHeight='64px'
-          marginTop='100px'
+          fontSize={{ base: "32px", sm: "46px" }}
+          marginTop="100px"
+          textAlign={"center"}
         >
           How TechTiz Helps Your Business Grow
         </Heading>
 
         <HStack
-          w='full'
-          padding='20px'
-          justifyContent={{ base: 'start', md: 'center' }}
-          mt='50px !important'
+          w="full"
+          padding="20px"
+          justifyContent={{ base: "start", md: "center" }}
+          mt="50px !important"
         >
-          <Box w={{ base: '100%', md: '50%' }}>
+          <Box w={{ base: "100%", md: "50%" }}>
             <Accordion
               allowToggle
-              w='100%'
+              w="100%"
               onChange={(e) => {
                 if (e >= 0) {
-                  setExpanded(true)
-                  setSelectedImage(e)
+                  setExpanded(true);
+                  setSelectedImage(e);
                 } else {
-                  setExpanded(false)
+                  setExpanded(false);
                 }
               }}
             >
@@ -75,44 +75,44 @@ const GrowBusiness = () => {
                           ? 100
                           : 0
                       }
-                      size='xs'
-                      colorScheme='blue'
+                      size="xs"
+                      colorScheme="blue"
                     />
                   )}
                   <AccordionItem
                     key={index}
                     onClick={() => {
-                      setSelectedImage(index)
+                      setSelectedImage(index);
                     }}
                   >
                     <h2>
                       <AccordionButton>
-                        <Box flex='1' textAlign='left'>
+                        <Box flex="1" textAlign="left">
                           <Text
                             color={Colors.blueSecondary}
-                            fontSize='24px'
-                            lineHeight='63.98px'
+                            fontSize={{ base: "18px", sm: "24px" }}
+                            lineHeight="63.98px"
                           >
                             {item.heading}
                           </Text>
                         </Box>
                         <AccordionIcon
                           color={Colors.blueSecondary}
-                          height='24px'
-                          width='24px'
+                          height="24px"
+                          width="24px"
                         />
                       </AccordionButton>
                     </h2>
                     {item.list.map((listItem, index) => (
                       <AccordionPanel pb={4} key={index}>
-                        <List display='flex' alignItems='flex-start'>
+                        <List display="flex" alignItems="flex-start">
                           <Image
                             src={images.listBullet}
-                            marginTop='6px'
-                            marginRight='20px'
+                            marginTop="6px"
+                            marginRight="20px"
                           />
                           <ListItem>
-                            <Text fontSize='16px' lineHeight='30px'>
+                            <Text fontSize="16px" lineHeight="30px">
                               {listItem}
                             </Text>
                           </ListItem>
@@ -125,16 +125,16 @@ const GrowBusiness = () => {
             </Accordion>
           </Box>
 
-          <Box paddingLeft='80px' display={{ base: 'none', md: 'block' }}>
+          <Box paddingLeft="80px" display={{ base: "none", md: "block" }}>
             {GrowBusinessImages.map(
               (image, index) =>
                 index === selectedImage && (
                   <Image
                     src={image}
-                    alt='image'
+                    alt="image"
                     key={index}
-                    height='350px'
-                    width='400px'
+                    height="350px"
+                    width="400px"
                   />
                 )
             )}
@@ -142,7 +142,7 @@ const GrowBusiness = () => {
         </HStack>
       </VStack>
     </Flex>
-  )
-}
+  );
+};
 
-export default GrowBusiness
+export default GrowBusiness;
